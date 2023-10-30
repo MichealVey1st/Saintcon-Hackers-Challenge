@@ -5,21 +5,21 @@ import time
 #blue
 #white
 
-green_client = ModbusTcpClient(host='10.30.246.117', port=512)
+green_client = ModbusTcpClient(host='**.**.***.***', port=512)
 green_client.connect()
 green_client.write_coil(0x00, False, 1)
 time.sleep(2)
 green_client.write_coil(0x00, True, 1)
 green_client.close()
 
-blue_client_base = ModbusTcpClient(host='10.30.246.117', port=514)
+blue_client_base = ModbusTcpClient(host='**.**.***.***', port=514)
 blue_client_base.connect()
 blue_client_base.write_coil(0x00, False, 1)
 time.sleep(2)
 blue_client_base.write_coil(0x00, True, 1)
 blue_client_base.close()
 
-white_client = ModbusTcpClient(host='10.30.246.117', port=516)
+white_client = ModbusTcpClient(host='**.**.***.***', port=516)
 white_client.connect()
 white_client.write_coil(0x2040, False, 1)
 white_client.write_coil(0x2041, False, 1)
@@ -30,7 +30,7 @@ print(result.bits[0])
 white_client.close()
 
 #for ports in [512, 513, 514, 515, 516]:
-#	client = ModbusTcpClient(host='10.30.246.117', port=ports)
+#	client = ModbusTcpClient(host='**.**.***.***', port=ports)
 #	print("scanning port: "+ str(ports))
 #	client.connect()
 #	for i in range(20):

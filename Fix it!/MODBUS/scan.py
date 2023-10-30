@@ -5,7 +5,7 @@ from pymodbus.client import ModbusTcpClient
 #512, 513, 514, 515, 	
 
 for ports in [512, 513, 514, 515, 516]:
-	client = ModbusTcpClient(host='10.30.246.117', port=ports)
+	client = ModbusTcpClient(host='**.**.***.***', port=ports)
 	print("scanning port: "+ str(ports))
 	client.connect()
 	for i in range(1,2045):
